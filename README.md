@@ -1,19 +1,38 @@
-# Pewlett_Hackard_Analysis
+# Employee_Retirement_Analysis
+
+#### Tools Used:
+
+*Postgres SQL 15
+*VS Code 1.77
+*PGAdmin
 
 ## Overview
 
-    A large number of Pewlett_Hackard employees will be retiring soon. This will lead to a drastic change in personal across several departments in the next few years. This outlook  determines a set of soon to be retiring employees that would be able to serve in a mentorship program that would allow an easier transition when the time to retire comes.
+Of the 72,458 current employees in the company, we looked to determine how many, based on age and hire date, will be retiring soon.  
+
+The analysis highlights the importance of proactively addressing the upcoming changes in the workforce and ensuring a smooth knowledge transfer to maintain organizational effectiveness.
 
 ## Results
 
-    * The first stage of the analysis was to find employees within Pewlett Hackard that were coming up to retirement age, and who had also retired. We then broke down that list to just those coming up on retirement by age, that were still employed with the company.
+The first stage of our analysis found that 33,118 employees fall into our retirement eligibility pool.
+This drastic change in personal across several departments in the next few years will be a change the company would like to prepare for.
 
-    * We queried to find the titles of employees approaching retirement to locate the departments in which the "silver tsunami" would affect the most.
+ We first looked at the departments that had the most employees approaching retirement. Then the positions that met those same criteria.
 
-    *   Of the total 72,458 employees approaching retirement the vast majority of them ~50,000 are Senior team members. Just over 25,000 are Senior engineers, just under 25,000 are Senior Staff. With that many Senior employees leaving the need for a mentorship program is apparent.
+Development - 8,361
+Production - 7417
+Sales - 5,252
 
-    * There are 1,549 employees eligible for the mentorship program. Which allows for each employee in the program to get mentorship from several of the retiring staff.
+Senior Engineer - 13.651
+Senior Staff - 12,872
+Management - 2
+
+##### Additional Analysis
+
+With Sales and Development most affected by the upcoming retirement wave, a need for a mentorship program is apparent. 
+
+A table of eligible mentors was created to foster a program that could help train employees in line for advancement to better handle the resposibilities of a potential promotion. 
 
 ## Summary
 
-    The eligibility for the mentorship program could be expanded. The selection process was determined by age, not by length of time with the company or by title. The number of employees naring retirement is substantially larger than the employees deemed elligible for the mentorship. As as there will be many more jobs available in the coming years than employees enrolled in the mentorship program, it would be logical to foster a program in which the large number of leaving employees is not leaving the company hierarchy dismantled.
+Our analysis revealed that 33,118 employees are approaching retirement based on their age and hire date. This highlights the need for the company to proactively address this workforce change and ensure a smooth transfer of knowledge. Departments such as Development, Production, and Sales will be particularly affected. To prepare for the transition, we recommend implementing a mentorship program that will provide training and support for employees in line for advancement, ensuring a seamless transfer of responsibilities and maintaining the company's success.

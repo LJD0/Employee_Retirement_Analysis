@@ -7,13 +7,50 @@
 
 SELECT
     -- get employee count for each birth year 1952 to 1955
-    (SELECT COUNT(*) FROM employees WHERE birth_date BETWEEN '1952-01-01' AND '1955-12-31') AS total_employees,
-    (SELECT COUNT(*) FROM employees WHERE birth_date BETWEEN '1952-01-01' AND '1952-12-31') AS employees_1952,
-    (SELECT COUNT(*) FROM employees WHERE birth_date BETWEEN '1953-01-01' AND '1953-12-31') AS employees_1953,
-    (SELECT COUNT(*) FROM employees WHERE birth_date BETWEEN '1954-01-01' AND '1954-12-31') AS employees_1954,
-    (SELECT COUNT(*) FROM employees WHERE birth_date BETWEEN '1955-01-01' AND '1955-12-31') AS employees_1955,
+    (SELECT COUNT(*) 
+        FROM employees as e 
+        INNER JOIN dept_employees as de
+            on e.emp_no = de.emp_no
+            AND de.to_date = ('9999-01-01') 
+        WHERE e.birth_date BETWEEN '1952-01-01' AND '1955-12-31'
+        ) AS total_employees,
+    (SELECT COUNT(*) 
+        FROM employees as e
+        INNER JOIN dept_employees as de
+            on e.emp_no = de.emp_no
+            AND de.to_date = ('9999-01-01')
+        WHERE e.birth_date BETWEEN '1952-01-01' AND '1952-12-31'
+        ) AS employees_1952,
+    (SELECT COUNT(*) 
+        FROM employees as e
+            INNER JOIN dept_employees as de
+                on e.emp_no = de.emp_no
+                AND de.to_date = ('9999-01-01')
+        WHERE birth_date BETWEEN '1953-01-01' AND '1953-12-31'
+        ) AS employees_1953,
+    (SELECT COUNT(*) 
+        FROM employees as e
+        INNER JOIN dept_employees as de
+            on e.emp_no = de.emp_no
+            AND de.to_date = ('9999-01-01')
+        WHERE birth_date BETWEEN '1954-01-01' AND '1954-12-31'
+        ) AS employees_1954,
+    (SELECT COUNT(*) 
+        FROM employees as e
+            INNER JOIN dept_employees as de
+                on e.emp_no = de.emp_no
+                AND de.to_date = ('9999-01-01')
+        WHERE birth_date BETWEEN '1955-01-01' AND '1955-12-31'
+        ) AS employees_1955,
     -- get employee count that age and hire year meet requirements
-    (SELECT COUNT(*) FROM employees WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31') AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31')) AS eligible_employees;
+    (SELECT COUNT(*) 
+        FROM employees as e 
+            INNER JOIN dept_employees as de
+                on e.emp_no = de.emp_no
+                AND de.to_date = ('9999-01-01')
+        WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31') 
+        AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31')
+        ) AS eligible_employees;
 
 
 
@@ -46,14 +83,14 @@ AND (e.hire_date BETWEEN '1985-01-01' and '1988-12-31')
 
 -- Determine department retirement counts
 SELECT dept_name, COUNT(*) AS count
-INTO dept_retirement_count
+-- INTO dept_retirement_count
 FROM Retirement_Eligible_Employees
 GROUP BY dept_name
 ORDER BY count DESC;
 
 -- Determine Title retirement counts 
 SELECT title, COUNT(*) AS count
-INTO title_retirement_count
+-- INTO title_retirement_count
 FROM Retirement_Eligible_Employees
 GROUP BY title
 ORDER BY count DESC;
@@ -79,7 +116,7 @@ SELECT ree.emp_no,
     ree.first_name,
     ree.last_name,
     ree.dept_name
-INTO Mentorship_Eligible_Employees
+-- INTO Mentorship_Eligible_Employees
 From Retirement_Eligible_Employees as ree
 WHERE dept_name in ('Sales','Development');
 
