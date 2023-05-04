@@ -1,6 +1,5 @@
 # Pewlett_Hackard_Analysis
 
-
 ## Overview
 
     A large number of Pewlett_Hackard employees will be retiring soon. This will lead to a drastic change in personal across several departments in the next few years. This outlook  determines a set of soon to be retiring employees that would be able to serve in a mentorship program that would allow an easier transition when the time to retire comes.
@@ -11,10 +10,9 @@
 
     * We queried to find the titles of employees approaching retirement to locate the departments in which the "silver tsunami" would affect the most.
 
-    *   Of the total 72,458 employees approaching retirement the vast majority of them ~50,000 are Senior team members. Just over 25,000 are Senior engineers, just under 25,000 are Senior Staff. With that many Senior employees leaving the need for a mentorship program is apparent. 
+    *   Of the total 72,458 employees approaching retirement the vast majority of them ~50,000 are Senior team members. Just over 25,000 are Senior engineers, just under 25,000 are Senior Staff. With that many Senior employees leaving the need for a mentorship program is apparent.
 
-    * There are 1,549 employees eligible for the mentorship program. Which allows for each employee in the program to get mentorship from several of the retiring staff. 
-
+    * There are 1,549 employees eligible for the mentorship program. Which allows for each employee in the program to get mentorship from several of the retiring staff.
 
 ## Summary
 
