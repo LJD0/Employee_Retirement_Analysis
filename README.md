@@ -12,6 +12,8 @@ Of the 72,458 current employees in the company, we looked to determine how many,
 
 The analysis highlights the importance of proactively addressing the upcoming changes in the workforce and ensuring a smooth knowledge transfer to maintain organizational effectiveness.
 
+![database_schema](Data/output/Employee_Retirement_Schema.png)
+
 ## Results
 
 The first stage of our analysis found that 33,118 employees fall into our retirement eligibility pool.
