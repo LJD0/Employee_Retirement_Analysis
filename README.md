@@ -12,7 +12,7 @@ Of the 72,458 current employees in the company, we looked to determine how many,
 
 The analysis highlights the importance of proactively addressing the upcoming changes in the workforce and ensuring a smooth knowledge transfer to maintain organizational effectiveness.
 
-<img style='width: 80vw' alt='employee retirement schema' src='Data/output/Employee_Retirement_Schema.png'>
+<img style='width: 80vw' alt='employee retirement schema' src='https://github.com/LJD0/Employee_Retirement_Analysis/blob/ea3d4a1070514de29cb06f359c6d9a3d9ce49c41/Data/output/Employee_Retirement_Schema.png'>
 
 ## Results
 
